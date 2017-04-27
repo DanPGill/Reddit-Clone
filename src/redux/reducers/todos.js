@@ -3,16 +3,12 @@ import _ from 'lodash'
 /* eslint-disable no-shadow */
 const initialState = { todos: [], currentlyEditingTodo: { text: '', completed: false } }
 
-const idForNewTodo = (todos) => _.get(_.maxBy(todos, 'id'), 'id', 0) + 1
+const idForNewTodo = todos => _.get(_.maxBy(todos, 'id'), 'id', 0) + 1
 
 const completeTodo = (todos, todoId) => {
-  const todoIndex = _.findIndex(todos, (todo) => todo.id === todoId)
+  const todoIndex = _.findIndex(todos, todo => todo.id === todoId)
 
-  return [
-    ...todos.slice(0, todoIndex),
-    { ...todos[todoIndex], completed: true },
-    ...todos.slice(todoIndex + 1),
-  ]
+  return [...todos.slice(0, todoIndex), { ...todos[todoIndex], completed: true }, ...todos.slice(todoIndex + 1)]
 }
 
 export default function todos(state = initialState, action) {
@@ -26,7 +22,7 @@ export default function todos(state = initialState, action) {
         currentlyEditingTodo: initialState.currentlyEditingTodo,
       }
     case 'todos/DELETE_TODO':
-      return { ...state, todos: _.reject(state.todos, (todo) => todo.id === action.payload) }
+      return { ...state, todos: _.reject(state.todos, todo => todo.id === action.payload) }
     case 'todos/COMPLETE_TODO':
       return { ...state, todos: completeTodo(state.todos, action.payload) }
     default:
