@@ -69,8 +69,8 @@
     "redux-thunk": "2.2.0"
   },
   "lint-staged": {
-    "*.js": [
-      "npm run prettier --",
+    "src/**/*.js": [
+      "yarn prettier --",
       "git add"
     ]
   }
