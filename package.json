@@ -14,7 +14,7 @@
     "lint:js": "eslint ./src",
     "lint:sass": "sass-lint -c sass-lint.yaml -v",
     "prettier": "prettier --single-quote --trailing-comma all --no-semi --print-width 180 --write \"src/**/*.js\"",
-    "precommit": "lint-staged",
+    "precommit": "lint-staged && yarn lint",
     "eslint-check": "eslint --print-config .eslintrc | eslint-config-prettier-check"
   },
   "devDependencies": {
@@ -30,7 +30,7 @@
     "eslint-config-prettier": "^1.7.0",
     "cross-env": "3.1.4",
     "css-loader": "^0.26.1",
-     "eslint-plugin-prettier": "^2.0.1",
+    "eslint-plugin-prettier": "^2.0.1",
     "eslint": "^3.14.1",
     "eslint-config-airbnb": "14.0.0",
     "eslint-plugin-import": "2.2.0",
@@ -68,8 +68,8 @@
     "redux-thunk": "2.2.0"
   },
   "lint-staged": {
-    "*.js": [
-      "npm run prettier --",
+    "src/**/*.js": [
+      "yarn prettier --",
       "git add"
     ]
    }
