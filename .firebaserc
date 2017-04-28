@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "<PROJECT>"
+    "default": "reddit-clone-178ed",
+    "reddit-clone": "reddit-clone-178ed"
   }
 }
