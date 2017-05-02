@@ -1,12 +1,11 @@
 import Route from './components/app/route'
+import Header from './containers/redditClone'
 
-import Landing from './components/landing'
-
-export const routes = []
+export const routes = [{ path: 'redditClone', component: Header }]
 
 export default {
   path: '/',
   component: Route,
-  indexRoute: { component: Landing },
+  indexRoute: { component: Header },
   childRoutes: routes,
 }
