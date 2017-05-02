@@ -1,6 +1,7 @@
 import React from 'react'
-import Header from 'components/redditClone/header.js'
+import Reddit from 'components/redditClone/index.js'
 
 export default () => {
-  return <Header />
+  return <Reddit />
 }
+console.log(Reddit)
