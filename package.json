@@ -5,7 +5,7 @@
   "author": "Richard Gill <richard@rgill.co.uk>",
   "scripts": {
     "upgrade": "yarn upgrade-interactive",
-    "deploy": "yarn run build && firebase deploy --token \"1/E3w1MWNzdfZwpRSnHbSbB_amwRAvjG1FmwoBXyhdv6E\"",
+    "deploy": "yarn run build && firebase deploy --token \"1/XJjpt1EDSbWgkpz2zbvffLSQWY99LMj55a_K_ttaKAo\"",
     "test": "yarn check && npm run lint",
     "start": "webpack-dev-server",
     "prod": "cross-env NODE_ENV=production webpack-dev-server --env.prod=true",
