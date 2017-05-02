@@ -1,14 +1,13 @@
 import React from 'react'
+import _ from 'lodash'
 import Header from 'components/redditClone/header.js'
 import Posts from 'components/redditClone/posts.js'
 
-const test = { upVotes: 5, postLink: 'https://www.reddit.com/', postTitle: 'The Original' }
-
-export default () => {
+export default props => {
   return (
     <div>
       <Header />
-      <Posts post={test} />
+      {_.map(props.posts, post => <Posts post={post} />)}
     </div>
   )
 }

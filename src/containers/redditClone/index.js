@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import Reddit from 'components/redditClone/index.js'
 
-export default () => {
-  return <Reddit />
+export class RedditContainer extends Component {
+  render() {
+    return <Reddit posts={this.props.posts} />
+  }
 }
-console.log(Reddit)
+export default connect(state => state.posts)(RedditContainer)
