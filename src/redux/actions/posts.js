@@ -25,3 +25,11 @@ export const getPosts = () => dispatch => {
     },
   )
 }
+
+export const addNewPost = (link, title, postId) => {
+  return database().ref(`posts/${postId}`).set({
+    link: link,
+    title: title,
+    upvotes: 0,
+  })
+}
