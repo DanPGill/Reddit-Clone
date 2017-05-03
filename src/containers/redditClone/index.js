@@ -5,7 +5,7 @@ import Reddit from 'components/redditClone/index.js'
 
 export class RedditContainer extends Component {
   componentDidMount() {
-    console.log(this.props.dispatch(getPosts()))
+    this.props.dispatch(getPosts())
   }
   render() {
     return <Reddit posts={this.props.posts} loading={this.props.loading} />
