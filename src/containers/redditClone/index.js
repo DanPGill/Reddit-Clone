@@ -8,7 +8,7 @@ export class RedditContainer extends Component {
     this.props.dispatch(getPosts())
   }
   render() {
-    return <Reddit posts={this.props.posts} loading={this.props.loading} onAddPost={(link, title, postId) => this.props.dispatch(addNewPost(link, title, postId))} />
+    return <Reddit posts={this.props.posts} loading={this.props.loading} onAddPost={(link, title) => this.props.dispatch(addNewPost(link, title))} />
   }
 }
 export default connect(state => state.posts)(RedditContainer)
