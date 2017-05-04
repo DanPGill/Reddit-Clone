@@ -1,7 +1,12 @@
 import Route from './components/app/route'
 import Reddit from './containers/redditClone'
 
-export const routes = [{ path: 'redditClone', component: Reddit }]
+export const routes = [
+  {
+    path: 'redditClone',
+    component: Reddit,
+  },
+]
 
 export default {
   path: '/',
