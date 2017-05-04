@@ -33,3 +33,11 @@ export const addNewPost = (link, title) => {
     upvotes: 0,
   })
 }
+
+export const updatePostLink = newPost => {
+  return { type: 'UPDATE_POST_LINK', payload: newPost }
+}
+
+export const updatePostTitle = newPost => {
+  return { type: 'UPDATE_POST_TITLE', payload: newPost }
+}
