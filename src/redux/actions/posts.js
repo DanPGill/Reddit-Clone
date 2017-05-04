@@ -14,7 +14,7 @@ export const getPostsSuccess = post => {
 
 export const getPosts = () => dispatch => {
   dispatch(getPostsRequested())
-  return database().ref('/posts/').once(
+  return database().ref('/posts/').on(
     'value',
     snap => {
       dispatch(getPostsSuccess(snap.val()))
@@ -24,4 +24,12 @@ export const getPosts = () => dispatch => {
       dispatch(getPostsRejected())
     },
   )
+}
+
+export const addNewPost = (link, title) => {
+  return database().ref('posts/').push({
+    link: link,
+    title: title,
+    upvotes: 0,
+  })
 }
