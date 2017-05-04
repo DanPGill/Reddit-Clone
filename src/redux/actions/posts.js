@@ -27,12 +27,9 @@ export const getPosts = () => dispatch => {
 }
 
 export const addNewPost = (link, title) => {
-  const newPostId = database().ref().push().key
-  const updates = {}
-  updates[`posts/${newPostId}`] = {
+  return database().ref('posts/').push({
     link: link,
     title: title,
     upvotes: 0,
-  }
-  return database().ref().update(updates)
+  })
 }
