@@ -26,10 +26,10 @@ export const getPosts = () => dispatch => {
   )
 }
 
-export const addNewPost = (link, title) => {
+export const addNewPost = () => (dispatch, getState) => {
   return database().ref('posts/').push({
-    link: link,
-    title: title,
+    link: getState().posts.currentlyEditingPost.link,
+    title: getState().posts.currentlyEditingPost.title,
     upvotes: 0,
   })
 }

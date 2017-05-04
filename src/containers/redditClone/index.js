@@ -11,10 +11,9 @@ export class RedditContainer extends Component {
     return (
       <Reddit
         posts={this.props.posts}
-        currentlyEditingPostLink={this.props.currentlyEditingPost.link}
-        currentlyEditingPostTitle={this.props.currentlyEditingPost.title}
+        currentlyEditingPost={this.props.currentlyEditingPost}
         loading={this.props.loading}
-        onAddPost={() => this.props.dispatch(addNewPost(this.props.currentlyEditingPost.link, this.props.currentlyEditingPost.title))}
+        onAddPost={() => this.props.dispatch(addNewPost())}
         onUpdatePostLink={link => this.props.dispatch(updatePostLink(link))}
         onUpdatePostTitle={title => this.props.dispatch(updatePostTitle(title))}
       />
