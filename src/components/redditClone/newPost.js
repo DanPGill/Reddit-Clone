@@ -1,10 +1,19 @@
 import React from 'react'
+import Form from 'components/core/form'
 
 export default props => {
   return (
     <div>
       <div>
-        <button onClick={() => props.onAddPost('https://www.amazon.co.uk', "Earth's Most Customer- centric Company")}>Create a New Post</button>
+        <Form onSubmit={() => props.onAddPost()}>
+          Link:
+          <input onChange={e => props.onUpdatePostLink(e.target.value)} value={props.currentlyEditingPost} />
+          <br />
+          Title:
+          <input onChange={e => props.onUpdatePostTitle(e.target.value)} value={props.currentlyEditingPost} />
+          <br />
+          <button>Create a New Post</button>
+        </Form>
       </div>
     </div>
   )

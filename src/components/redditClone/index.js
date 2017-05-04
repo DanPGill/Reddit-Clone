@@ -10,6 +10,6 @@ export default props => {
     : <div>
         <Header />
         {_.map(props.posts, post => <Posts post={post} />)}
-        <NewPost onAddPost={props.onAddPost} />
+        <NewPost onAddPost={props.onAddPost} onUpdatePostLink={props.onUpdatePostLink} onUpdatePostTitle={props.onUpdatePostTitle} />
       </div>
 }
