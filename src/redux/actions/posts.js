@@ -1,4 +1,5 @@
 import { database } from 'firebase'
+import { browserHistory } from 'react-router'
 
 export const getPostsRequested = () => {
   return { type: 'GET_POSTS_REQUESTED' }
@@ -27,6 +28,7 @@ export const getPosts = () => dispatch => {
 }
 
 export const addNewPost = () => (dispatch, getState) => {
+  browserHistory.push('/')
   return database().ref('posts/').push({
     link: getState().posts.currentlyEditingPost.link,
     title: getState().posts.currentlyEditingPost.title,
