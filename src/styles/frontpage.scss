@@ -1,46 +1,47 @@
 .frontpagecontainer {
-    display: flex;
-    flex-flow: column;
-     flex: 1;
+  display: flex;
+  flex-flow: column;
+  flex: 1;
    }
 
 .frontpagecontainer2 {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
    }
 
 .header {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    padding: 0px 0px 40px;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  padding: 0px 0px 40px;
    }
 
- .posts {
-     display: flex;
- flex-flow: column, wrap;
- padding: 10px 0px 10px 10px;
+.posts {
+  display: flex;
+  flex-flow: column, wrap;
+  padding: 10px 0px 10px 10px;
  }
  
- .link {
-     padding: 0px 10px 0px;
-     font-size: 20px;
+.link {
+  padding: 0px 10px 0px;
+  font-size: 20px;
  }
  
- .upvotes {padding: 0px 10px 0px;
-     font-size: 13px;
-     border-radius: 5px;
-     border: 1px solid gray;
-     height: 20px;
+.upvotes {
+  padding: 0px 10px 0px;
+  font-size: 13px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  height: 20px;
  }
  
- .sidebar{
-     display: flex;
-     flex-direction: row;
-     background: lightblue;
-     justify-content: center;
-     border-radius: 5px;
-     border: 1px solid black;
-     width: 250px;
-     height: 300px;
+.sidebar{
+  display: flex;
+  flex-direction: row;
+  background: lightblue;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 250px;
+  height: 300px;
      }
