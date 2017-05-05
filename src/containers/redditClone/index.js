@@ -9,14 +9,16 @@ export class RedditContainer extends Component {
   }
   render() {
     return (
-      <Reddit
-        posts={this.props.posts}
-        currentlyEditingPost={this.props.currentlyEditingPost}
-        loading={this.props.loading}
-        onAddPost={() => this.props.dispatch(addNewPost())}
-        onUpdatePostLink={link => this.props.dispatch(updatePostLink(link))}
-        onUpdatePostTitle={title => this.props.dispatch(updatePostTitle(title))}
-      />
+      <div>
+        <Reddit
+          posts={this.props.posts}
+          loading={this.props.loading}
+          currentlyEditingPost={this.props.currentlyEditingPost}
+          onAddPost={() => this.props.dispatch(addNewPost())}
+          onUpdatePostLink={link => this.props.dispatch(updatePostLink(link))}
+          onUpdatePostTitle={title => this.props.dispatch(updatePostTitle(title))}
+        />
+      </div>
     )
   }
 }
