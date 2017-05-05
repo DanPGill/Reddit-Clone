@@ -1,5 +1,4 @@
 import { database } from 'firebase'
-import { browserHistory } from 'react-router'
 
 export const getPostsRequested = () => {
   return { type: 'GET_POSTS_REQUESTED' }
@@ -41,8 +40,4 @@ export const updatePostLink = newPost => {
 
 export const updatePostTitle = newPost => {
   return { type: 'UPDATE_POST_TITLE', payload: newPost }
-}
-
-export const newPostPage = () => {
-  return browserHistory.push('/newPost')
 }
