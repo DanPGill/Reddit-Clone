@@ -1,6 +1,6 @@
 import Route from './components/app/route'
-import Reddit from './containers/redditClone'
-import NewPost from './components/redditClone/newPost'
+import Reddit from './containers/redditClone/reddit'
+import NewPost from './containers/redditClone/newPostPage'
 
 export const routes = [{ path: 'newPost', component: NewPost }]
 
