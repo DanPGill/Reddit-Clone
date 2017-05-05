@@ -1,12 +1,13 @@
 import React from 'react'
+import f from 'styles/frontpage'
 
 export default props => {
   return (
-    <div>
-      <a href={props.post.link}>
+    <div className={f.posts}>
+      <p className={f.upvotes}>Upvotes: {props.post.upvotes}</p>
+      <a className={f.link} href={props.post.link}>
         <p>{props.post.title}</p>
       </a>
-      <p>Upvotes: {props.post.upvotes}</p>
     </div>
   )
 }
