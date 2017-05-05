@@ -1,4 +1,5 @@
 import { database } from 'firebase'
+import { browserHistory } from 'react-router'
 
 export const getPostsRequested = () => {
   return { type: 'GET_POSTS_REQUESTED' }
