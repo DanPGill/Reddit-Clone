@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addNewComment, updateComment } from 'redux/actions/comments'
-import { getPosts } from 'redux/actions/posts'
+import { addNewComment, updateComment, getPosts } from 'redux/actions/posts'
 import Comments from 'components/redditClone/comments/index'
 
 export class CommentsContainer extends Component {
@@ -14,9 +13,10 @@ export class CommentsContainer extends Component {
         currentlyEditingComment={this.props.currentlyEditingComment}
         onAddComment={() => this.props.dispatch(addNewComment())}
         onUpdateComment={comment => this.props.dispatch(updateComment(comment))}
-        post={this.props.posts}
+        posts={this.props.posts}
+        currentPostId={this.props.currentPostId}
       />
     )
   }
 }
-export default connect(state => state)(CommentsContainer)
+export default connect(state => state.posts)(CommentsContainer)

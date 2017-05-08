@@ -43,3 +43,7 @@ export const updatePostLink = newPost => {
 export const updatePostTitle = newPost => {
   return { type: 'UPDATE_POST_TITLE', payload: newPost }
 }
+
+export const updateComment = newComment => {
+  return { type: 'UPDATE_COMMENT', payload: newComment }
+}

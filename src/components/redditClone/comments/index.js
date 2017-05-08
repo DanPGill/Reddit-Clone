@@ -7,7 +7,7 @@ export default props => {
   return (
     <div>
       <Header />
-      <Comments post={props.post} currentPost={props.post.currentPostId} />
+      <Comments posts={props.posts} />
       <Form onSubmit={() => props.onAddComment()}>
         <label htmlFor="comment">
           Add a Comment:

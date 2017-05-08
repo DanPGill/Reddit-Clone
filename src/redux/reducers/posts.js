@@ -1,4 +1,10 @@
-const initialState = { posts: [], loading: true, currentlyEditingPost: { link: '', title: '' } }
+const initialState = {
+  posts: [],
+  loading: true,
+  currentlyEditingPost: { link: '', title: '' },
+  currentlyEditingComment: '',
+  currentPostId: 'post1',
+}
 
 export default function posts(state = initialState, action) {
   switch (action.type) {
@@ -17,6 +23,9 @@ export default function posts(state = initialState, action) {
 
     case 'UPDATE_POST_TITLE':
       return { ...state, currentlyEditingPost: { ...state.currentlyEditingPost, title: action.payload } }
+
+    case 'UPDATE_COMMENT':
+      return { ...state, currentlyEditingComment: action.payload }
 
     default:
       return state
