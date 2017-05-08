@@ -1,41 +1,41 @@
 .frontpagecontainer {
   display: flex;
   flex-direction: row;
-                    }
+}
 
 .postcontainer {
   display: flex;
   flex-flow: column;
   flex: 1;
-               }
+}
 
 .header {
   display: flex;
   flex-direction: row;
   flex: 1;
-  padding: 0px 0px 40px;
-        }
+  padding: 0 0 40px;
+}
 
 .posts {
   display: flex;
   flex-flow: column, wrap;
-  padding: 10px 0px 10px 10px;
-       }
- 
+  padding: 10px 0 10px 10px;
+}
+
 .link {
-  padding: 0px 10px 0px;
+  padding: 0 10px;
   font-size: 20px;
-      }
- 
+}
+
 .upvotes {
-  padding: 0px 10px 0px;
+  padding: 0 10px;
   font-size: 13px;
   border-radius: 5px;
   border: 1px solid gray;
   height: 20px;
   min-width: 100px;
-         }
- 
+}
+
 .sidebar {
   display: flex;
   flex-direction: row;
@@ -45,4 +45,4 @@
   border: 1px solid black;
   width: 250px;
   height: 300px;
-         }
+}
