@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addNewPost, updatePostLink, updatePostTitle } from 'redux/actions/posts'
-import NewPost from 'components/redditClone/newPosts/newPostPage'
+import NewPost from 'components/redditClone/newPosts/index'
 
 export class NewPostContainer extends Component {
   render() {

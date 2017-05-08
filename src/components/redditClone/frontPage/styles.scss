@@ -1,12 +1,12 @@
 .frontpagecontainer {
   display: flex;
-  flex-flow: column;
-  flex: 1;
+  flex-direction: row;
    }
 
-.frontpagecontainer2 {
+.postcontainer {
   display: flex;
-  flex-direction: row;
+  flex-flow: column;
+  flex: 1;
    }
 
 .header {
@@ -33,9 +33,10 @@
   border-radius: 5px;
   border: 1px solid gray;
   height: 20px;
+  min-width: 100px;
  }
  
-.sidebar{
+.sidebar {
   display: flex;
   flex-direction: row;
   background: lightblue;
