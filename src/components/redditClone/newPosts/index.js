@@ -1,6 +1,6 @@
 import React from 'react'
 import NewPost from 'components/redditClone/newPosts/newPost'
-import Header from 'components/redditClone/header.js'
+import Header from 'components/redditClone/frontPage/header'
 
 export default props => {
   return (

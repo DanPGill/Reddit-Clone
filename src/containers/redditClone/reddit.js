@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getPosts } from 'redux/actions/posts.js'
-import Reddit from 'components/redditClone/index.js'
+import { getPosts } from 'redux/actions/posts'
+import Reddit from 'components/redditClone/frontPage/index'
 
 export class RedditContainer extends Component {
   componentDidMount() {
