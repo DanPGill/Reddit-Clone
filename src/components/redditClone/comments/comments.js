@@ -6,11 +6,11 @@ export default props => {
   return (
     <div>
       <div>
-        {_.map(props.posts, post => <Post post={post} />)}
+        <Post post={props.currentPost} />
       </div>
       <p>Comments</p>
       <div>
-        {_.map(props.posts, comment => _.map(comment.comments, c => <p>{c}</p>))}
+        {_.map(props.currentPost.comments, comment => <p>{comment}</p>)}
       </div>
 
     </div>
