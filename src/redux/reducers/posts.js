@@ -1,4 +1,8 @@
-const initialState = { posts: [], loading: true, currentlyEditingPost: { link: '', title: '' } }
+const initialState = {
+  posts: [],
+  loading: true,
+  currentlyEditingPost: { link: '', title: '' },
+}
 
 export default function posts(state = initialState, action) {
   switch (action.type) {

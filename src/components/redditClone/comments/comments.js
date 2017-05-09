@@ -10,10 +10,9 @@ export default props => {
       </div>
       <p>Comments</p>
       <div>
-        {_.map(props.post.comments, comment => {
-          return <p>{comment}</p>
-        })}
+        {_.map(props.currentPost.comments, comment => <p>{comment}</p>)}
       </div>
+
     </div>
   )
 }

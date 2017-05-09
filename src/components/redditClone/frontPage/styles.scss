@@ -18,7 +18,7 @@
 
 .posts {
   display: flex;
-  flex-flow: column, wrap;
+  flex-flow: row;
   padding: 10px 0 10px 10px;
 }
 
@@ -38,9 +38,9 @@
 
 .sidebar {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background: lightblue;
-  justify-content: center;
+  align-items: center;
   border-radius: 5px;
   border: 1px solid black;
   width: 250px;
