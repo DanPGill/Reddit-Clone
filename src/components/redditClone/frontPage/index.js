@@ -16,7 +16,6 @@ export default props => {
           <div>
             <div className={styles.sidebar}>
               <a href="/newPost">Add a New Post</a>
-              <a href="/comments">Test</a>
             </div>
           </div>
         </div>
