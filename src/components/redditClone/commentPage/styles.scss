@@ -1,21 +1,42 @@
-.newPostContainer {
+.commentPage {
   display: flex;
   flex-direction: column;
-  padding: 0 10px 10px;
-}
-
-.inputField {
-  width: 500px;
-  height: 25px;
-  border-radius: 5px;
-  border: 1px solid gray;
-}
-
-.newPostButton {
-  width: 200px;
-  height: 25px;
+  padding: 0 0 0 10px;
 }
 
 .padding {
-  padding: 10px 0;
+  padding: 20px 0 0;
+}
+
+.heading {
+  font-size: 30px;
+}
+
+.addCommentForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputField {
+  width: 450px;
+  height: 200px;
+}
+
+.addCommentButton {
+  width: 300px;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+}
+
+.postedBy {
+  font-size: 13px;
+  color: darkblue;
+}
+
+.commentText {
+  max-width: 500px;
+  white-space: pre-wrap;
 }

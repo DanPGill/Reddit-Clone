@@ -11,11 +11,13 @@ export default props => {
         <Post post={props.currentPost} postId={props.postId} />
       </div>
       <div className={styles.commentPage}>
-        <Form onSubmit={() => props.onAddComment()}>
+        <Form className={styles.addCommentForm} onSubmit={() => props.onAddComment()}>
           <label htmlFor="comment">
             Add a Comment:
           </label>
-          <input className={styles.addCommentForm} id="comment" onChange={e => props.onUpdateComment(e.target.value)} value={props.currentlyEditingComment} />
+          <textarea className={styles.inputField} id="comment" onChange={e => props.onUpdateComment(e.target.value)} value={props.currentlyEditingComment} />
+          <div className={styles.padding} />
+          <button className={styles.addCommentButton}>Add Your Comment</button>
         </Form>
         <div className={styles.padding} />
         <p className={styles.heading}>Comments</p>
@@ -25,7 +27,6 @@ export default props => {
               <div className={styles.comments}>
                 <p className={styles.postedBy}>Posted by Anonymous:</p>
                 <p className={styles.commentText}>{comment}</p>
-                <div className={styles.divider} />
               </div>
             </div>
           ))}
