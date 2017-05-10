@@ -1,0 +1,21 @@
+.newPostContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px 10px;
+}
+
+.inputField {
+  width: 500px;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.newPostButton {
+  width: 200px;
+  height: 25px;
+}
+
+.padding {
+  padding: 10px 0;
+}

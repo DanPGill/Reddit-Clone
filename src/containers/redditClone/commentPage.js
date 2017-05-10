@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addNewComment, updateComment, getCommentPagePost, getPostId } from 'redux/actions/comments'
+import { addNewComment, updateComment, getCommentPagePost } from 'redux/actions/comments'
 import CommentPage from 'components/redditClone/commentPage/index'
 
 export class CommentPageContainer extends Component {
   componentDidMount() {
-    this.props.dispatch(getPostId(this.props.params.postId))
-    this.props.dispatch(getCommentPagePost())
+    this.props.dispatch(getCommentPagePost(this.props.params.postId))
   }
   render() {
     return (
       <CommentPage
         currentlyEditingComment={this.props.comments.currentlyEditingComment}
-        onAddComment={() => this.props.dispatch(addNewComment())}
+        onAddComment={() => this.props.dispatch(addNewComment(this.props.params.postId))}
         onUpdateComment={comment => this.props.dispatch(updateComment(comment))}
         currentPost={this.props.comments.currentPost}
+        postId={this.props.params.postId}
       />
     )
   }

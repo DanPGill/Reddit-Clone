@@ -12,11 +12,8 @@ export const getCommentPagePostSuccess = commentPage => {
   return { type: 'GET_COMMENT_PAGE_POST_SUCCESS', payload: commentPage }
 }
 
-export const getPostId = postId => {
-  return { type: 'GET_POST_ID', payload: postId }
-}
-
-export const getCommentPagePost = () => (dispatch, getState) => {
+export const getCommentPagePost = postId => (dispatch, getState) => {
+  dispatch({ type: 'GET_POST_ID', payload: postId })
   dispatch(getCommentPagePostRequested())
   return database().ref(`/posts/${getState().comments.currentPostId}`).on(
     'value',
@@ -28,6 +25,10 @@ export const getCommentPagePost = () => (dispatch, getState) => {
       dispatch(getCommentPagePostRejected())
     },
   )
+}
+
+export const addNewComment = currentPostId => (dispatch, getState) => {
+  database().ref(`posts/${currentPostId}/comments`).push(getState().comments.currentlyEditingComment)
 }
 
 export const updateComment = newComment => {
