@@ -1,13 +1,13 @@
 import React from 'react'
 import Form from 'components/core/form'
 import Header from 'components/redditClone/frontPage/header'
-import Comments from './comments'
+import CommentPage from './commentPage'
 
 export default props => {
   return (
     <div>
       <Header />
-      <Comments currentPost={props.currentPost} />
+      <CommentPage currentPost={props.currentPost} />
       <Form onSubmit={() => props.onAddComment()}>
         <label htmlFor="comment">
           Add a Comment:

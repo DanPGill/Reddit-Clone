@@ -11,12 +11,11 @@ export default props => {
         <Header />
         <div className={styles.frontpagecontainer}>
           <div className={styles.postcontainer}>
-            {_.map(props.posts, post => <Post post={post} />)}
+            {_.map(props.posts, (post, key) => <Post post={post} postId={key} />)}
           </div>
           <div>
             <div className={styles.sidebar}>
               <a href="/newPost">Add a New Post</a>
-              <a href="/comments">Test</a>
             </div>
           </div>
         </div>

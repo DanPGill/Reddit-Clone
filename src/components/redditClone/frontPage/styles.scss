@@ -22,6 +22,16 @@
   padding: 10px 0 10px 10px;
 }
 
+.postContent {
+  display: flex;
+  flex-flow: column;
+}
+
+.comments {
+  font-size: 13px;
+  padding: 5px 0 0 10px;
+}
+
 .link {
   padding: 0 10px;
   font-size: 20px;

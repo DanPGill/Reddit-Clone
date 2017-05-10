@@ -2,6 +2,7 @@ const initialState = {
   posts: [],
   loading: true,
   currentlyEditingPost: { link: '', title: '' },
+  currentPostId: '',
 }
 
 export default function posts(state = initialState, action) {
@@ -21,6 +22,9 @@ export default function posts(state = initialState, action) {
 
     case 'UPDATE_POST_TITLE':
       return { ...state, currentlyEditingPost: { ...state.currentlyEditingPost, title: action.payload } }
+
+    case 'DISPLAY_COMMENTS':
+      return { ...state, currentPostId: action.payload }
 
     default:
       return state

@@ -28,12 +28,12 @@ export const getPosts = () => dispatch => {
 }
 
 export const addNewPost = () => (dispatch, getState) => {
-  browserHistory.push('/')
-  return database().ref('posts/').push({
+  const newPost = database().ref('posts/').push({
     link: getState().posts.currentlyEditingPost.link,
     title: getState().posts.currentlyEditingPost.title,
     upvotes: 0,
   })
+  browserHistory.push(`posts/${newPost.key}`)
 }
 
 export const updatePostLink = newPost => {

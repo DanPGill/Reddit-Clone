@@ -1,27 +1,28 @@
 import { database } from 'firebase'
 
-export const getCommentsRequested = () => {
-  return { type: 'GET_COMMENTS_REQUESTED' }
+export const getCommentPagePostRequested = () => {
+  return { type: 'GET_COMMENT_PAGE_POST_REQUESTED' }
 }
 
-export const getCommentsRejected = () => {
-  return { type: 'GET_COMMENTS_REJECTED', payload: 'An error occurred when retrieving data' }
+export const getCommentPagePostRejected = () => {
+  return { type: 'GET_COMMENT_PAGE_POST_REJECTED', payload: 'An error occurred when retrieving data' }
 }
 
-export const getCommentsSuccess = comment => {
-  return { type: 'GET_COMMENTS_SUCCESS', payload: comment }
+export const getCommentPagePostSuccess = commentPage => {
+  return { type: 'GET_COMMENT_PAGE_POST_SUCCESS', payload: commentPage }
 }
 
-export const getComments = () => (dispatch, getState) => {
-  dispatch(getCommentsRequested())
+export const getCommentPagePost = postId => (dispatch, getState) => {
+  dispatch(getCommentPagePostRequested())
+  dispatch({ type: 'GET_POST_ID', payload: postId })
   return database().ref(`/posts/${getState().comments.currentPostId}`).on(
     'value',
     snap => {
-      dispatch(getCommentsSuccess(snap.val()))
+      dispatch(getCommentPagePostSuccess(snap.val()))
     },
     error => {
       console.log(error)
-      dispatch(getCommentsRejected())
+      dispatch(getCommentPagePostRejected())
     },
   )
 }
