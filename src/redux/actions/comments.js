@@ -12,12 +12,9 @@ export const getCommentPagePostSuccess = commentPage => {
   return { type: 'GET_COMMENT_PAGE_POST_SUCCESS', payload: commentPage }
 }
 
-export const getPostId = postId => {
-  return { type: 'GET_POST_ID', payload: postId }
-}
-
-export const getCommentPagePost = () => (dispatch, getState) => {
+export const getCommentPagePost = postId => (dispatch, getState) => {
   dispatch(getCommentPagePostRequested())
+  dispatch({ type: 'GET_POST_ID', payload: postId })
   return database().ref(`/posts/${getState().comments.currentPostId}`).on(
     'value',
     snap => {
