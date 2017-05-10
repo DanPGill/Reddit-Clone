@@ -27,6 +27,10 @@ export const getCommentPagePost = postId => (dispatch, getState) => {
   )
 }
 
+export const addNewComment = currentPostId => (dispatch, getState) => {
+  database().ref(`posts/${currentPostId}/comments`).push(getState().comments.currentlyEditingComment)
+}
+
 export const updateComment = newComment => {
   return { type: 'UPDATE_COMMENT', payload: newComment }
 }

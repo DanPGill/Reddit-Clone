@@ -11,9 +11,10 @@ export class CommentPageContainer extends Component {
     return (
       <CommentPage
         currentlyEditingComment={this.props.comments.currentlyEditingComment}
-        onAddComment={() => this.props.dispatch(addNewComment())}
+        onAddComment={() => this.props.dispatch(addNewComment(this.props.params.postId))}
         onUpdateComment={comment => this.props.dispatch(updateComment(comment))}
         currentPost={this.props.comments.currentPost}
+        postId={this.props.params.postId}
       />
     )
   }
