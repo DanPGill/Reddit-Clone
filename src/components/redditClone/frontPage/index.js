@@ -11,7 +11,7 @@ export default props => {
         <Header />
         <div className={styles.frontpagecontainer}>
           <div className={styles.postcontainer}>
-            {_.map(props.posts, post => <Post post={post} onDisplayCommentPage={props.onDisplayCommentPage} />)}
+            {_.map(props.posts, (post, key) => <Post post={post} postId={key} />)}
           </div>
           <div>
             <div className={styles.sidebar}>

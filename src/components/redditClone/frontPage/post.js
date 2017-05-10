@@ -9,7 +9,7 @@ export default props => {
         <a className={styles.link} href={props.post.link}>
           <p>{props.post.title}</p>
         </a>
-        <a href={`/posts/${props.post.postId}`}>Comments</a>
+        <a href={`/posts/${props.postId}`}>Comments</a>
       </div>
     </div>
   )
